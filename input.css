@@ -1,0 +1,52 @@
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Script";
+
+    
+    src: url("./fonts/scriptbl.ttf");
+    font-display: swap;
+  }
+  .blur-image {
+    /* filter: blur(2px);
+    transition: all 1s; */
+  }
+  .non-blur-image {
+    transition: all 5s;
+  }
+  #loader {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      .loader-inner {
+        height: 5rem; /* 20 * 0.25rem */
+        width: 5rem; /* 20 * 0.25rem */
+        border-radius: 9999px; /* full rounded */
+        border-bottom-width: 8px; /* 4 * 0.25rem */
+        border-top-width: 8px; /* 4 * 0.25rem */
+        border-color: #0080FF; /* Assuming --logo-color is defined */
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+}
